@@ -10,6 +10,8 @@ import Staking from './Staking'
 import MyItems from './MyItems'
 import MyListedItems from './MyListedItems.js'
 import MyPurchases from './MyPurchases.js'
+import Battle from './Battle.js'
+
 import { useState } from 'react'
 import { ethers } from "ethers"
 import { Spinner } from 'react-bootstrap'
@@ -119,6 +121,9 @@ function App() {
               } />
               <Route path="/staking" element={
                 <Staking staking={staking} dojo={dojo} nft={tokenContract} account={account} tokenAddress={tokenAddress} marketAddress={marketAddress} stakingAddress={stakingAddress} />
+              } />
+              <Route path="/battle" element={
+                <Battle staking={staking} dojo={dojo} nft={tokenContract} account={account} tokenAddress={tokenAddress} marketAddress={marketAddress} stakingAddress={stakingAddress} />
               } />
             </Routes>
           )}

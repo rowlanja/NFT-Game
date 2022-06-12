@@ -5,6 +5,7 @@ import { rinkeby_token_address, token_abi } from '../../backend/contracts/metada
 
 import Web3 from 'web3/dist/web3.min.js';
 
+import market from "../market.gif"
 
 const NftItem = ({ item, marketplace, nft, account }) => {
 
@@ -86,7 +87,19 @@ export default function MyItems({ marketplace, nft, account,  tokenAddress, mark
   }, [])
 
   return (
-    <div className="flex justify-center">
+    <div 
+      className="flex justify-center"
+      class="bk_Img"
+      style={{
+          backgroundImage: "url(" + market + ")",
+          backgroundSize: "cover",
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          height: "100vh",
+          color: 'beige',
+          fontSize: '14px'
+      }}
+    >
       {items.length > 0 ? items.map((item, idx) => (
         <div>
            <NftItem item={item} marketplace={marketplace} nft={nft} account={account}/>

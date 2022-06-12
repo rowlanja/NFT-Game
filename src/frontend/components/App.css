@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.color-nav{
+  background-color: rgb(24, 24, 24);
+  color: white;
+
+}
+
+.navItem {
+  color: white;
+}

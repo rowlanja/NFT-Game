@@ -4,7 +4,7 @@ import { rinkeby_token_address } from '../../backend/contracts/metadata/token'
 
 import Web3 from 'web3/dist/web3.min.js';
 
-import swamp from "../swamp.gif"
+import arena from "../fightingArea.gif"
 import "./styles/staking.css";
 const Nft = ({ nft, staking }) => {
     const openseaLink = 'https://testnets.opensea.io/assets/rinkeby/' + rinkeby_token_address + '/' + nft.name
@@ -88,7 +88,7 @@ const StakeData = ({ item, staking, account }) => {
     );
 }
 
-export default function MyItems({ staking, dojo, nft, account, tokenAddress, marketAddress, stakingAddress }) {
+export default function Battle({ staking, dojo, nft, account, tokenAddress, marketAddress, stakingAddress }) {
     const [uris, setUris] = useState([]);
     const [unstakedTokens, setUnstakedTokens] = useState([])
     const [stakedTokens, setStakedTokens] = useState([])
@@ -157,7 +157,7 @@ export default function MyItems({ staking, dojo, nft, account, tokenAddress, mar
         <div
             class="bk_Img"
             style={{
-                backgroundImage: "url(" + swamp + ")",
+                backgroundImage: "url(" + arena + ")",
                 backgroundSize: "cover",
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'fixed',
